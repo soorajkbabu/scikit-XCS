@@ -3,6 +3,9 @@ from skXCS import StringEnumerator # to process string into numbers: might have 
 from skXCS import XCS
 import numpy as np
 
+# XCS starting 
+model = XCS()
+
 #Read from CSV file
 data = pd.read_csv("./Data/trialData.csv") #dummy data
 
@@ -73,8 +76,7 @@ print(headers)
 print("\nClass Label")
 print(classLabel)
 
-# XCS starting 
-model = XCS()
+
 
 """
 nu = Power parameter for fitness evaluation. recommended to be 1 for data with any level of noise. 
@@ -82,10 +84,7 @@ Increasing nu in clean problems improves chances of converging on optimal soluti
 """
 
 # Model training 
-model = XCS(learning_iterations = 5000,nu = 10) 
+model = XCS(learning_iterations = 500) 
 trainedModel = model.fit(dataFeatures,dataPhenotypes)
 
-print(trainedModel)
-
-
-
+trainedModel
