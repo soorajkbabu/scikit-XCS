@@ -94,3 +94,4 @@ print("Validation")
 print(trainedModel.score(dataFeatures,dataPhenotypes))
 
 trainedModel.export_final_rule_population("./Data/fileRulePopulation.csv",headers,classLabel)
+
