@@ -87,4 +87,10 @@ Increasing nu in clean problems improves chances of converging on optimal soluti
 model = XCS(learning_iterations = 500) 
 trainedModel = model.fit(dataFeatures,dataPhenotypes)
 
-trainedModel
+print("Predictions:")
+print(trainedModel.predict(dataFeatures))
+
+print("Validation")
+print(trainedModel.score(dataFeatures,dataPhenotypes))
+
+trainedModel.export_final_rule_population("./Data/fileRulePopulation.csv",headers,classLabel)
