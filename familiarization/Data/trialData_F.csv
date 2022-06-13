@@ -1,0 +1,6 @@
+Active_Component,User_Goal,User_Theme,User_Familiarity,Hovering_Object,Clicked_Object,Idle_Time,Physiological_Data,Gaze_Pattern,R
+Landing_Page,select,fire_therapy,1,Load_Template,nan,0,nan,nan,tooltip
+Landing_Page,select,fire_therapy,1,nan,nan,1,nan,nan,notification
+Landing_Page,select,firstaid_training,1,Load_Template,nan,0,nan,nan,external_link
+Editor,,,,,,,,,
+Supervision_Monitor,,,,,,,,,
