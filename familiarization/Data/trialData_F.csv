@@ -10,4 +10,4 @@ Editor,select,firstaid_training,0,assets,nan,1,nan,nan,assets
 Editor,select,acrophobia,0,nan,assets,1,nan,nan,assets
 Supervision_Monitor,select,rehabilitation,1,minimap,nan,1,nan,nan,highlights_to_interactables
 Supervision_Monitor,select,rehabilitation,0,environment_control,nan,1,nan,nan,tooltip
-Supervision_Monitor,navigation,rehabilitation,0,environment_control,apply,1,nan,nan,highlights_to_nextitem
+Supervision_Monitor,navigate,rehabilitation,0,environment_control,apply,1,nan,nan,highlights_to_nextitem
