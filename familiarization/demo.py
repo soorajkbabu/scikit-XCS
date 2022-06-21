@@ -81,7 +81,7 @@ print(headers)
 print("\nClass Label")
 print(classLabel)
 
-testInstance = np.array([[0,1,1,0,nan,nan,0,nan,nan],[0,0,1,0,nan,nan,0,nan,nan]])
+testInstance = np.array([[3,1,3,0,3,2,1,nan,nan]]) # Array has to be ndarray (mxn)
 #testInstance = np.array([0,1,1,0,3,3,0,3,3])
 
 """
@@ -93,10 +93,13 @@ Increasing nu in clean problems improves chances of converging on optimal soluti
 model = XCS(learning_iterations = 500) 
 trainedModel = model.fit(dataFeatures,dataPhenotypes)
 
-print("Predictions:")
-print(trainedModel.predict(dataFeatures))
+#print("Predictions:")
+#print(trainedModel.predict(dataFeatures))
 
-print("Single Manual Prediction:")
+print("Single Manual Prediction Input:")
+print(testInstance)
+
+print("Single Manual Prediction Output")
 print(trainedModel.predict(testInstance)) # Manual input 
 #print(testInstance.astype(int))
 
