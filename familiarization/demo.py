@@ -1,3 +1,4 @@
+from cmath import nan
 import pandas as pd
 from skXCS import StringEnumerator # to process string into numbers: might have to link this with IDs from graph nodes
 from skXCS import XCS
@@ -70,8 +71,8 @@ headers,classLabel,dataFeatures,dataPhenotypes = converter.get_params()
 
 #converter = StringEnumerator("./Data/trialData.csv","phenotype")
 #converter.print_invalid_attributes()
-
-print("Data Features")
+print("\nAFTER CONVERSION")
+print("\nData Features")
 print(dataFeatures)
 print("\nData Phenotypes")
 print(dataPhenotypes)
@@ -80,7 +81,8 @@ print(headers)
 print("\nClass Label")
 print(classLabel)
 
-
+testInstance = np.array([[0,1,1,0,nan,nan,0,nan,nan],[0,0,1,0,nan,nan,0,nan,nan]])
+#testInstance = np.array([0,1,1,0,3,3,0,3,3])
 
 """
 nu = Power parameter for fitness evaluation. recommended to be 1 for data with any level of noise. 
@@ -93,6 +95,10 @@ trainedModel = model.fit(dataFeatures,dataPhenotypes)
 
 print("Predictions:")
 print(trainedModel.predict(dataFeatures))
+
+print("Single Manual Prediction:")
+print(trainedModel.predict(testInstance)) # Manual input 
+#print(testInstance.astype(int))
 
 print("Validation")
 print(trainedModel.score(dataFeatures,dataPhenotypes))
